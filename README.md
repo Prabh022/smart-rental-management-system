@@ -29,7 +29,7 @@ An Oracle SQL database for managing residential property rentals: tenants, renta
 - **3 views** — `tenant_lease_summary`, `maintenance_request_details`, `staff_assignment_summary`
 - **3 stored procedures** (PL/SQL) — `add_payment`, `create_maintenance_request`, `assign_staff_to_request`
 - **3 triggers** (PL/SQL) — set a unit to `Under Maintenance` when a request is created, set it to `Occupied` when a lease is created, and reject payments of zero or less
-- **10 example queries** (`queries.sql`) — joins, aggregates, `NOT EXISTS` checks, and date-based reports such as monthly revenue and upcoming lease expiries
+- **11 example queries** (`queries.sql`) — joins, aggregates, `NOT EXISTS` checks, and date-based reports such as monthly revenue, upcoming lease expiries, and average rent by unit type
 - **Sample data** — 3 tenants, 3 units, 2 leases, 3 payments, 2 maintenance requests, 3 staff, 2 assignments
 
 ## Files and run order
@@ -41,7 +41,7 @@ Run the scripts in this order in SQL Developer or LiveSQL:
 3. `views.sql` — creates the 3 views
 4. `procedures.sql` — creates the 3 stored procedures
 5. `triggers.sql` — creates the 3 triggers
-6. `queries.sql` — 10 example queries to run against the data
+6. `queries.sql` — 11 example queries to run against the data
 
 Notes:
 

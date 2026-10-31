@@ -74,3 +74,9 @@ FROM STAFF s
 JOIN STAFF_ASSIGNMENTS a ON s.staff_id = a.staff_id
 JOIN MAINTENANCE_REQUESTS m ON a.request_id = m.request_id
 WHERE m.status IN ('Open', 'In Progress');
+
+-- 11. Average monthly rent by unit type
+SELECT unit_type, COUNT(*) AS unit_count, AVG(monthly_rent) AS average_rent
+FROM UNITS
+GROUP BY unit_type
+ORDER BY unit_type;

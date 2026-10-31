@@ -1,5 +1,15 @@
 # Changes made when extracting this project from sql-projects-portfolio
 
+## Update — October 31, 2026
+
+**Query 11: average monthly rent by unit type.** Added to
+`queries.sql`: average `monthly_rent` grouped by `unit_type`, with a
+unit count per type, ordered by type. Uses only standard aggregate
+syntax, so it runs as written in Oracle and in SQLite. Verified
+against the sample data (SQLite): 1BHK — 1 unit, 1500.00; 2BHK — 1
+unit, 2100.00; Studio — 1 unit, 1200.00. README updated (10 → 11
+example queries).
+
 ## SQL files: no changes
 
 All six `.sql` files (`schema.sql`, `sample_data.sql`, `views.sql`, `procedures.sql`, `triggers.sql`, `queries.sql`) are byte-for-byte copies of the originals in the `smart_rental_management_system/` folder of the old portfolio repo. Structural testing found no syntax errors that needed fixing, so the user's SQL was left exactly as written.
